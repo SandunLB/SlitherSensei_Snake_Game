@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="CSS\Style.css">
-</head>
-<body>
-    <div id="game-container">
-        <div id="snake"></div>
-        <div id="egg" class="food"></div>
-        <div id="frog" class="food"></div>
-        <div id="mouse" class="food"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <script src="JS/Script.js" type="module" defer></script>
+    <title>Snake - vanilla JavaScript</title>
+  </head>
+  <body>
+    <button class="start-btn" data-content="Start">Start</button>
+    <div class="score">Score: <span>0</span></div>
+    <div class="grid"></div>
+    <div class="keys-container">
+      <button id="ArrowUp">
+        <svg width="30" height="30" viewBox="0 0 10 10">
+          <g transform="rotate(0, 5, 5)">
+            <path d="M5,4 L7,6 L3,6 L5,4" />
+          </g>
+        </svg>
+      </button>
+      <button id="ArrowLeft">
+        <svg width="30" height="30" viewBox="0 0 10 10">
+          <g transform="rotate(-90, 5, 5)">
+            <path d="M5,4 L7,6 L3,6 L5,4" />
+          </g>
+        </svg>
+      </button>
+      <button id="ArrowDown">
+        <svg width="30" height="30" viewBox="0 0 10 10">
+          <g transform="rotate(180, 5, 5)">
+            <path d="M5,4 L7,6 L3,6 L5,4" />
+          </g>
+        </svg>
+      </button>
+      <button id="ArrowRight">
+        <svg width="30" height="30" viewBox="0 0 10 10">
+          <g transform="rotate(90, 5, 5)">
+            <path d="M5,4 L7,6 L3,6 L5,4" />
+          </g>
+        </svg>
+      </button>
     </div>
-    <script src="JS\Script.js"></script>
-</body>
+  </body>
 </html>
