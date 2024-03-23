@@ -72,4 +72,45 @@ function startGame() {
     cells[i].style.background = `hsl(${snakeColor}, 100%, 50%)`;
     cells[i].classList.add('snake');
   });
+    cells[foodItemIndex].classList.remove('food-item');
+  cells[foodItemIndex].innerText = '';
+  createFood();
+  score = 0;
+  scoreDisplay.innerHTML = score;
+  interval = setInterval(gameLoop, intervalTime);
 }
+
+function gameLoop() {
+  cells[currentSnake[0]].innerText = '';
+  if (
+    (currentSnake[0] + width >= width * width && direction === width) || // hits bottom wall
+    (currentSnake[0] % width === width - 1 && direction === 1) || // hits right wall
+    (currentSnake[0] % width === 0 && direction === -1) || // hits left wall
+    (currentSnake[0] - width < 0 && direction === -width) || // hits the top wall
+    cells[currentSnake[0] + direction].classList.contains('snake') 
+  ) {
+    grid.classList.add('shake');
+    clearInterval(interval);
+    return;
+  }
+  const tail = currentSnake.pop();
+  cells[tail].classList.remove('snake');
+  cells[tail].style.background = 'none';
+  currentSnake.unshift(currentSnake[0] + direction); // gives direction to the head
+  
+  if (cells[currentSnake[0]].classList.contains('food-item')) {
+    cells[currentSnake[0]].classList.remove('food-item');
+    cells[tail].classList.add('snake');
+    snakeColor += snakeColorIncrement % 360;
+    cells[tail].style.background = `hsl(${snakeColor}, 100%, 50%)`;
+    currentSnake.push(tail);
+    score++;
+    scoreDisplay.textContent = score;
+    createFood();
+  }
+  cells[currentSnake[0]].classList.add('snake');
+  cells[currentSnake[0]].innerText = '👀';
+  snakeColor += snakeColorIncrement % 360;
+  cells[currentSnake[0]].style.background = `hsl(${snakeColor}, 100%, 50%)`;
+}
+
