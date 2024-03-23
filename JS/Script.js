@@ -87,7 +87,7 @@ function gameLoop() {
     (currentSnake[0] % width === width - 1 && direction === 1) || // hits right wall
     (currentSnake[0] % width === 0 && direction === -1) || // hits left wall
     (currentSnake[0] - width < 0 && direction === -width) || // hits the top wall
-    cells[currentSnake[0] + direction].classList.contains('snake') 
+    cells[currentSnake[0] + direction].classList.contains('snake') // hits itself
   ) {
     grid.classList.add('shake');
     clearInterval(interval);
@@ -112,5 +112,29 @@ function gameLoop() {
   cells[currentSnake[0]].innerText = '👀';
   snakeColor += snakeColorIncrement % 360;
   cells[currentSnake[0]].style.background = `hsl(${snakeColor}, 100%, 50%)`;
+}
+
+function moveSnake(moveDirection) {
+  let directionVal;
+  if (moveDirection === 'ArrowRight' && direction !== -1) {
+    directionVal = 1;
+    if (currentSnake[0] + directionVal === currentSnake[1]) return;
+    direction = directionVal;
+  }
+  if (moveDirection === 'ArrowLeft' && direction !== 1) {
+    directionVal = -1;
+    if (currentSnake[0] + directionVal === currentSnake[1]) return;
+    direction = directionVal;
+  }
+  if (moveDirection === 'ArrowUp' && direction !== width) {
+    directionVal = -width;
+    if (currentSnake[0] + directionVal === currentSnake[1]) return;
+    direction = directionVal;
+  }
+  if (moveDirection === 'ArrowDown' && direction !== -width) {
+    directionVal = width;
+    if (currentSnake[0] + directionVal === currentSnake[1]) return;
+    direction = directionVal;
+  }
 }
 
