@@ -138,3 +138,22 @@ function moveSnake(moveDirection) {
   }
 }
 
+function handleKeyMove(e) {
+  if (!['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown'].includes(e.key))
+    return;
+  moveSnake(e.key);
+}
+
+function handleButtonKeyMove(e) {
+  const { id } = e.currentTarget;
+  moveSnake(id);
+}
+keyBtns.forEach(keyBtn => {
+  keyBtn.addEventListener('mousedown', handleButtonKeyMove);
+  keyBtn.addEventListener('touchstart', handleButtonKeyMove);
+});
+
+document.addEventListener('keydown', handleKeyMove);
+startBtn.addEventListener('click', startGame);
+
+
