@@ -156,6 +156,3 @@ keyBtns.forEach(keyBtn => {
 document.addEventListener('keydown', handleKeyMove);
 startBtn.addEventListener('click', startGame);
 
-function ChangeSnake Type(params) {
-  
-}
