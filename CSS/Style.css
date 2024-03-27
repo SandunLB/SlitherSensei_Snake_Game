@@ -137,3 +137,11 @@
       transform: translate3d(4px, 0, 0);
     }
   }
+
+  @media (max-width:768px){
+    .body{
+      width: 75%;
+      background: #000;
+    }
+
+  }
