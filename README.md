@@ -20,5 +20,5 @@ This is a classic Snake game implemented using HTML, CSS, and JavaScript.
 
 If you want to run the game locally:
 
-1. Clone the repository:
+1. Clone the repository: :)
 
