@@ -16,9 +16,4 @@ This is a classic Snake game implemented using HTML, CSS, and JavaScript.
    - Each food eaten increases your score.
    - Try to achieve the highest score possible!
 
-## Development
-
-If you want to run the game locally:
-
-1. Clone the repository: :)
 
