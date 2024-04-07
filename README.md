@@ -15,6 +15,5 @@ This is a classic Snake game implemented using HTML, CSS, and JavaScript.
 3. **Scoring:**
    - Each food eaten increases your score.
    - Try to achieve the highest score possible!
-   - AAA
 
 
