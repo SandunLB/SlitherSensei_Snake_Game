@@ -1,19 +1,17 @@
 # Snake Game
 
-This is a classic Snake game implemented using HTML, CSS, and JavaScript.
+Welcome to the Snake Game! This is a classic game implemented using HTML, CSS, and JavaScript.
 
-## How to Play
+## Features
 
-1. **Controls:**
-   - Use the arrow keys to control the direction of the snake.
-   - You can also use WASD keys if you prefer.
+### Classic Gameplay
+Enjoy the timeless fun of controlling a snake as it navigates through a grid, growing longer with each piece of food eaten.
 
-2. **Objective:**
-   - Eat the food (red dots) to grow longer.
-   - Avoid hitting the walls or colliding with yourself.
+### Responsive Design
+The game is designed to adapt to various screen sizes, ensuring a seamless experience whether you're playing on a desktop or mobile device.
 
-3. **Scoring:**
-   - Each food eaten increases your score.
-   - Try to achieve the highest score possible
+### Score Tracking
+Keep track of your progress with the built-in score tracker. Challenge yourself to beat your high score with each playthrough.
 
-
+### Game Over Screen
+When your snake collides with a wall or itself, the game ends, and your final score is displayed on the game over screen.
