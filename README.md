@@ -15,3 +15,5 @@ Keep track of your progress with the built-in score tracker. Challenge yourself 
 
 ### Game Over Screen
 When your snake collides with a wall or itself, the game ends, and your final score is displayed on the game over screen.
+
+*****
