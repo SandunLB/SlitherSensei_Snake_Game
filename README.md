@@ -14,6 +14,4 @@ The game is designed to adapt to various screen sizes, ensuring a seamless exper
 Keep track of your progress with the built-in score tracker. Challenge yourself to beat your high score with each playthrough.
 
 ### Game Over Screen
-When your snake collides with a wall or itself, the game ends, and your final score is displayed on the game over screen.
-
-*****
+When your snake collides with a wall or itself, the game ends, and your final score is displayed on the game over screen
